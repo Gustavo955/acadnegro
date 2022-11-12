@@ -1,12 +1,19 @@
-function generateHashtag(string) {
-    if (string.trim() === '') return false;
+function makeHashtag (str) {
+  let wordArray = str.split('').filter(char => char !== "");
+  let result = "#";
   
-    const stringWithCamelCase = string
-      .split(' ')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join('');
+  if (wordArray.length === 0) {
+    return false;
+  };
   
-    const stringWithHashtag = `#${stringWithCamelCase.trim()}`;
+  result = result + wordArray.map(word => {
+    let capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1);
+    return capitalizedWord;
+  }).join('');
   
-    return stringWithHashtag.length > 140 ? false : stringWithHashtag;
-  }
+  if(result.length > 140) {
+    return false;
+  } else{
+    return result;
+  };
+};

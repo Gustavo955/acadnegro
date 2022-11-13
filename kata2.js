@@ -1,3 +1,8 @@
+
+
+
+
+
 function generateHashtag(string) {
   if (string.trim() === '') return false;
 

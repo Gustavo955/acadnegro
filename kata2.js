@@ -20,6 +20,7 @@ function generateHashtag(string) {
   return stringWithHashtag.length > 140 ? false : stringWithHashtag;
 }
 
+
 console.log(generateHashtag(empty));
 console.log(generateHashtag(space));
 console.log(generateHashtag(have));

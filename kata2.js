@@ -17,7 +17,7 @@ function generateHashtag(string) {
 
   const stringWithHashtag = `#${string2.trim()}`;
 
-  return stringWithHashtag.length > 141 ? false : stringWithHashtag;
+  return stringWithHashtag.length > 140 ? false : stringWithHashtag;
 }
 
 console.log(generateHashtag(empty));

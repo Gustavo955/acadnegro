@@ -10,12 +10,12 @@ let repeat140 = "a".repeat(140);
 function generateHashtag(string) {
   if (string.trim() === '') return false;
 
-  const stringWithCamelCase = string
+  const string2= string
     .split(' ')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join('');
 
-  const stringWithHashtag = `#${stringWithCamelCase.trim()}`;
+  const stringWithHashtag = `#${string2.trim()}`;
 
   return stringWithHashtag.length > 141 ? false : stringWithHashtag;
 }
